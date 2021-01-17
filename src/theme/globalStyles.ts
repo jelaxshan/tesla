@@ -58,24 +58,10 @@ const mediaQueries: MediaQueries = {
   xlargeAndUp: `@media screen and (min-width: ${breakpoints.xl})`,
 };
 
-export const lightTheme = {
-  body: '#FFF',
-  text: '#363537',
-  toggleBorder: '#FFF',
-  background: '#363537',
-};
-export const darkTheme = {
-  body: '#000000',
-  text: '#FAFAFA',
-  toggleBorder: '#6B8096',
-  background: '#999',
-};
-
 export const theme = {
   fontSize,
   breakpoints,
   mediaQueries,
-  colors: lightTheme,
 };
 
 type ThemeType = typeof theme;
@@ -85,8 +71,14 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     margin: 0;
     padding: 0;
     font-family: Open-Sans, Helvetica, Sans-Serif;
-    background: ${({ theme }) => theme.colors.body};
-    color: ${({ theme }) => theme.colors.text};
+  }
+
+  html {
+  font-size: 62.5%;
+  }
+
+  * {
+    -webkit-appearance: none;
   }
 `;
 
