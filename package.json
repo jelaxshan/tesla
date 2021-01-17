@@ -7,9 +7,9 @@
     "start": "webpack-dev-server --mode development --open --hot --config ./webpack.config.js",
     "build": "webpack --mode production --config ./webpack.config.js",
     "lint": "npm run lint:code && npm run lint:style",
-    "lint:code": "eslint src/**/*.{ts,tsx} --quiet",
+    "lint:code": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "lint:style": "stylelint src/**/*.scss",
-    "test": "jest --config=jest.config.js",
+    "test": "jest --config=jest.config.js --passWithNoTests",
     "test:watch": "jest --config=jest.config.js --watch",
     "test:coverage": "jest --config=jest.config.js --coverage"
   },
@@ -33,29 +33,39 @@
   "homepage": "https://github.com/jelaxshan/tesla#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
-      "pre-push": "npm run test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix"
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^25.2.3",
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.10",
-    "@types/react-router-dom": "^5.1.6",
-    "@types/react-test-renderer": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "4.13.0",
+    "@typescript-eslint/parser": "4.13.0",
+    "babel-eslint": "10.1.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.14.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-css-modules": "^2.11.0",
-    "eslint-plugin-prettier": "^3.2.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-config-prettier": "7.1.0",
+    "eslint-config-react-app": "6.0.0",
+    "eslint-import-resolver-typescript": "2.3.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "husky": "^4.3.0",
@@ -63,6 +73,7 @@
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "react-test-renderer": "^16.14.0",
     "sass-loader": "^8.0.2",
@@ -80,6 +91,7 @@
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-router-dom": "^5.2.0"
+    "react-error-boundary": "^3.1.0",
+    "styled-components": "^5.2.1"
   }
 }

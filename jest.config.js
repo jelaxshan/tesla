@@ -11,8 +11,8 @@ module.exports = {
     '\\.scss$': 'identity-obj-proxy',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
   },
-  roots: ['<rootDir>/tests'],
-  testMatch: ['./**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  roots: ['<rootDir>'],
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
