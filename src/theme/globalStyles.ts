@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import iCielMedium from '../fonts/iCiel-Medium.ttf';
 
 interface FontSize {
   xxxs: string;
@@ -67,18 +68,23 @@ export const theme = {
 type ThemeType = typeof theme;
 
 const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
+
+  @font-face {
+    font-family: iCielMedium;
+    src: url(${iCielMedium}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   body {
     margin: 0;
     padding: 0;
-    font-family: Open-Sans, Helvetica, Sans-Serif;
-  }
-
-  html {
-  font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: iCielMedium;
   }
 
   * {
     -webkit-appearance: none;
+    margin: 0;
   }
 `;
 

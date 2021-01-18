@@ -3,6 +3,7 @@ import GlobalStyle from './theme/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme/globalStyles';
 import { ErrorBoundary } from 'react-error-boundary';
+import Header from '@components/Header/Header';
 
 function ErrorFallback({
   error,
@@ -26,7 +27,7 @@ export const App = () => {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
-          Hello
+          <Header />
         </>
       </ThemeProvider>
     </ErrorBoundary>
