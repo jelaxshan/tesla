@@ -2,9 +2,14 @@ import styled from 'styled-components';
 
 export const StyledNavBar = styled.div`
   background-color: transparent;
+  background: none;
   display: flex;
   padding: 16px;
   justify-content: space-between;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 95vw;
 `;
 
 export const StyledNavLink = styled.div`
