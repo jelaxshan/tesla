@@ -1,45 +1,54 @@
+import Button from '@components/Button/Button';
 import React from 'react';
-import styled from 'styled-components';
+import { TeslaInterface } from 'src/utils/teslaData';
+import {
+  StyledDiv,
+  StyledItem,
+  StyledHeading1,
+  StyledHeading2,
+  StyledBottomContent,
+  StyledButtonWrapper,
+} from './PageItems.styled';
 
-export const StyledItem = styled.div<{ backgroundImage: any }>`
-  height: 100vh;
-  width: 100vw;
-
-  background: url(${(props) => props.backgroundImage}) no-repeat center center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-`;
-
-interface Props {
-  title: string;
-  desc: string;
-  backgroundImage: any;
-}
 function PageItems({
   title,
-  desc,
-  // descLink,
+  description,
+  descriptionSecond,
+  descriptionLink,
   backgroundImage,
-}: // leftButton,
-// leftButtonText,
-// rightButton,
-// rightButtonText,
-// twoButtons,
-// first,
-Props) {
+  leftButton,
+  leftButtonText,
+  rightButton,
+  rightButtonText,
+  first,
+  footer,
+}: TeslaInterface) {
   return (
     <StyledItem backgroundImage={backgroundImage}>
       <div className="item__container">
-        <div className="item__text" style={{ marginTop: '10rem' }}>
-          <p>{title}</p>
-          <div className="item__textDesc">
-            <p>{desc}</p>
-          </div>
-        </div>
-        <div className="item__lowerThird">
-          <div className="item__buttons"></div>
-        </div>
+        <StyledDiv>
+          <StyledHeading1>{title}</StyledHeading1>
+          <StyledHeading2 as="h2">
+            <>
+              {description}
+              {descriptionSecond && (
+                <a href={descriptionLink}>{descriptionSecond}</a>
+              )}
+            </>
+          </StyledHeading2>
+        </StyledDiv>
+        <StyledBottomContent>
+          <StyledButtonWrapper>
+            {leftButton && (
+              <Button primary text={leftButtonText} link={leftButton} />
+            )}
+            {rightButton && (
+              <Button text={rightButtonText} link={rightButton} />
+            )}
+          </StyledButtonWrapper>
+        </StyledBottomContent>
+        {first && <div>Arrow</div>}
+        {footer && <div>Footer component</div>}
       </div>
     </StyledItem>
   );

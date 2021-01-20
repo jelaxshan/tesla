@@ -30,6 +30,14 @@ interface MediaQueries {
   xlargeAndUp: string;
 }
 
+interface Colors {
+  darkGrey: string;
+  white: string;
+  lightGrey: string;
+  lightBlack: string;
+  heading: string;
+}
+
 export const fontSize: FontSize = {
   xxxs: '0.75rem',
   xxs: '1rem',
@@ -52,6 +60,14 @@ export const breakpoints: Breakpoints = {
   xl: '1280px',
 };
 
+export const colors: Colors = {
+  darkGrey: '#171a20cc',
+  white: '#fff',
+  lightGrey: '#ffffff80',
+  lightBlack: '#5c5e62',
+  heading: '#393c41',
+};
+
 const mediaQueries: MediaQueries = {
   smallAndUp: `@media screen and (min-width: ${breakpoints.sm})`,
   mediumAndUp: `@media screen and (min-width: ${breakpoints.md})`,
@@ -63,6 +79,7 @@ export const theme = {
   fontSize,
   breakpoints,
   mediaQueries,
+  colors,
 };
 
 type ThemeType = typeof theme;
