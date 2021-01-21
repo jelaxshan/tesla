@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a61cb234-b7f6-401d-a851-9bda467877ea/deploy-status)](https://app.netlify.com/sites/upbeat-mccarthy-692132/deploys)
+
+### [Demo](https://upbeat-mccarthy-692132.netlify.app)
 # Tesla Homepage Clone
 
 This is just a hobby project (educational).
