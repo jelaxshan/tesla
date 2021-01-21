@@ -1,6 +1,6 @@
 # Tesla Homepage Clone
 
-This is just a hobby project and you are welcome to contribute to it and copy any of the stylings.
+This is just a hobby project (educational).
 
 
 1. [Available scripts](#scripts)
