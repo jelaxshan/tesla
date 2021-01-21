@@ -51,6 +51,6 @@ This is just a hobby project (educational).
 Before you commit or push something on repository, Husky will run code lints and tests.
 
 ### TODO: 
-1. Adding Mobile menu and fix some styles
+1. Adding Mobile menu and fix a lot of style issues both mobile and web.
 2. Add tests
 3. Finish it with adding all links
