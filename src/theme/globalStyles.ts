@@ -36,6 +36,7 @@ interface Colors {
   lightGrey: string;
   lightBlack: string;
   heading: string;
+  black: string;
 }
 
 export const fontSize: FontSize = {
@@ -66,6 +67,7 @@ export const colors: Colors = {
   lightGrey: '#ffffff80',
   lightBlack: '#5c5e62',
   heading: '#393c41',
+  black: '#171a20',
 };
 
 const mediaQueries: MediaQueries = {
@@ -80,7 +82,7 @@ export const theme = {
   breakpoints,
   mediaQueries,
   colors,
-};
+} as const;
 
 type ThemeType = typeof theme;
 
@@ -97,6 +99,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     padding: 0;
     box-sizing: border-box;
     font-family: iCielMedium;
+    color: #393c41;
   }
 
   * {

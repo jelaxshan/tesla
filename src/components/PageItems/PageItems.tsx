@@ -1,4 +1,5 @@
 import Button from '@components/Button/Button';
+import { Footer } from '@components/Footer/Footer';
 import React from 'react';
 import { TeslaInterface } from 'src/utils/teslaData';
 import {
@@ -8,6 +9,8 @@ import {
   StyledHeading2,
   StyledBottomContent,
   StyledButtonWrapper,
+  StyledArrowDown,
+  StyledContainer,
 } from './PageItems.styled';
 
 function PageItems({
@@ -25,14 +28,14 @@ function PageItems({
 }: TeslaInterface) {
   return (
     <StyledItem backgroundImage={backgroundImage}>
-      <div className="item__container">
+      <StyledContainer>
         <StyledDiv>
           <StyledHeading1>{title}</StyledHeading1>
           <StyledHeading2 as="h2">
             <>
               {description}
               {descriptionSecond && (
-                <a href={descriptionLink}>{descriptionSecond}</a>
+                <a href={descriptionLink}> {descriptionSecond}</a>
               )}
             </>
           </StyledHeading2>
@@ -47,9 +50,13 @@ function PageItems({
             )}
           </StyledButtonWrapper>
         </StyledBottomContent>
-        {first && <div>Arrow</div>}
-        {footer && <div>Footer component</div>}
-      </div>
+        {first && (
+          <StyledArrowDown viewBox="0 0 330 330">
+            <path d="M326 79c-6-5-16-5-22 0L165 219 26 79a15 15 0 00-22 22l150 150a15 15 0 0022 0l150-150c5-6 5-16 0-22z" />
+          </StyledArrowDown>
+        )}
+        {footer && <Footer />}
+      </StyledContainer>
     </StyledItem>
   );
 }

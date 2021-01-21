@@ -1,5 +1,11 @@
 # Tesla Homepage Clone
 
+This is just a hobby project and you are welcome to contribute to it and copy any of the stylings.
+
+TODO: 
+1. Adding Mobile menu and fix some styles
+2. Add tests
+3. Finish it with adding all links
 
  
 1. [Available scripts](#scripts)
@@ -43,11 +49,5 @@
 <a name="information" />
 
 ### Useful information
-
-I focused on separate logic from presentation layer of component, so components are created according to this scheme:
-- **index.tsx** - main file with component declaration. You can put here a React Hooks features (eg.: useState, useEffects etc.), prepare component props, do some base logic etc. This file should return component view layer with component props set.
-- **Component.tsx** - file with view layer of component.
-- **Component.styled.tsx** - file with component style declaration.
-- **handlers.ts** - file where You can place useful function for component.
 
 Before you commit or push something on repository, Husky will run code lints and tests.

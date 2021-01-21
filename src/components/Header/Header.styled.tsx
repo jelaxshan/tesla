@@ -20,6 +20,7 @@ export const StyledNavLink = styled.div`
 export const StyledNavToogle = styled.div`
   display: flex;
   margin-top: -2px;
+  margin-right: 8px;
 
   ${({ theme: { mediaQueries } }) => `
     ${mediaQueries.largeAndUp} {
