@@ -1,7 +1,7 @@
 import TeslaModel3 from '../assets/model3.jpeg';
-import TeslaModelS from '../assets/models.jpeg';
-import TeslaModelX from '../assets/modelx.jpeg';
-import TeslaModelY from '../assets/modely.jpeg';
+import TeslaModelS from '../assets/modelS.jpeg';
+import TeslaModelX from '../assets/modelX.jpeg';
+import TeslaModelY from '../assets/modelY.jpeg';
 import Powerwall from '../assets/solarPanels.jpeg';
 import TeslaAccessories from '../assets/accessories.jpg';
 
