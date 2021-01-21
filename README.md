@@ -2,12 +2,7 @@
 
 This is just a hobby project and you are welcome to contribute to it and copy any of the stylings.
 
-TODO: 
-1. Adding Mobile menu and fix some styles
-2. Add tests
-3. Finish it with adding all links
 
- 
 1. [Available scripts](#scripts)
 2. [Technology stack](#technology)
 3. [Useful information](#information)
@@ -51,3 +46,8 @@ TODO:
 ### Useful information
 
 Before you commit or push something on repository, Husky will run code lints and tests.
+
+### TODO: 
+1. Adding Mobile menu and fix some styles
+2. Add tests
+3. Finish it with adding all links
